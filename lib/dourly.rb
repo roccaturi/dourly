@@ -86,4 +86,6 @@ def check_document(document)
   unsupported_links(edgecases) unless !reports.include?("exceptions")
 end
 
-check_document("road_to_code.pdf")
+printf "Please enter a PDF filename to check its hyperlinks (no need to include the extension): "
+filename = gets.chomp
+check_document(filename + ".pdf")
